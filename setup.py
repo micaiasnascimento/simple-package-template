@@ -1,21 +1,19 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as f:
-    page_description = f.read()
-
-with open("requirements.txt") as f:
-    requirements = f.read().splitlines()
-
 setup(
-    name="package_name",
-    version="0.0.1",
-    author="my_name",
-    author_email="my_email",
-    description="My short description",
-    long_description=page_description,
-    long_description_content_type="text/markdown",
-    url="my_github_repository_project_link"
+    name='simple_package',
+    version='0.1',
     packages=find_packages(),
-    install_requires=requirements,
-    python_requires='>=3.8',
+    install_requires=[],  # Adicione aqui as dependências, se houver
+    description='Um pacote simples para cálculos.',
+    long_description=open('README.md', encoding='utf-8').read(),  # Garantir a leitura com encoding correto
+    long_description_content_type='text/markdown',
+    author='Micaias',
+    author_email='micaiasnascimentoo@gmail.com',
+    url='https://github.com/micaiasnascimento/simple-package-template',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',  # Verifique se você usa MIT ou outra licença
+        'Operating System :: OS Independent',
+    ],
 )
